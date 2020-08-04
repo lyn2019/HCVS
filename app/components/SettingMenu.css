@@ -1,0 +1,36 @@
+.settingMenuBox{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    /*background: #2d2d2d;*/
+    background: var(--color_black_medium_opacity);
+    border-radius: 0 20px 20px 0;
+    font-size: 12px;
+    box-shadow: 5px 5px 15px var(--color_black_medium_opacity);
+    z-index: 9999;
+}
+.settingMenuBox:hover{
+    cursor: pointer;
+}
+.settingMenuBox.open{
+    border-radius: 0 8px 8px 0;
+}
+.settingMenuBox.open .controlIcon{
+    border-bottom: 1px solid #777;
+    padding:8px 10px 8px 15px;
+
+}
+.settingMenuBox .controlIcon{
+    border-bottom: none;
+    padding:8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.settingMenuBox .menuContent .menuItem{
+    padding: 8px 15px;
+}
+.settingMenuBox .menuContent .menuItem:hover{
+    background: var(--color_black_medium_opacity);
+}

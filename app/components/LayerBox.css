@@ -1,0 +1,43 @@
+.confrimBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color_black_medium_opacity);
+    z-index: 9;
+}
+.confrimBox .content{
+    flex: 1;
+    height: 50%;
+    color:var(--color_white);
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.confrimBox .btnBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.confrimBox .btnBox .btnItem{
+    width: 100px;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 1px solid var(--color_white);
+    border-radius: 4px;
+    margin: 0 10px;
+    text-align: center;
+    background: var(--color_black_medium_opacity);
+}
+.confrimBox .btnBox .btnItem:hover{
+    cursor: pointer;
+}
+.confrimBox .btnBox .btnItem:nth-child(2){
+    background: var(--color_thunderbird);
+    border-color: var(--color_alto);
+
+}

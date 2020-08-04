@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>蜂堡服务协议</title>
+    <style>
+        body,html {
+            width: 100%;
+            height: 100%;
+            background: #f2f2f2;
+            box-sizing: border-box;
+            font-size: 14px;
+            line-height: 25px;
+            padding: 0;
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+
+        .h5 {
+            height: 5px;
+            width: 100%;
+            display: block;
+            margin: 0;
+        }
+
+        .topbar {
+            background: #FF8400;
+            height: 50px;
+            border-bottom: 1px solid #DDDFE3;
+            position: relative;
+        }
+
+        .topbar_title {
+            display: inline-block;
+            font-size: 20px;
+            line-height: 50px;
+            padding-left: 12px;
+        }whitebar {
+            background-color: #fcfcfc;
+        }
+
+        .back {
+            float: left;
+        }
+
+        .secClasslistarrow {
+            vertical-align: top;
+            width: 15px;
+            padding-top: 12px;
+            padding-left: 10px;
+            padding-bottom: 12px;
+            box-sizing: content-box;
+        }
+
+        .topbar .title {
+            line-height: 50px;
+            position: absolute;
+            font-size: 20px;
+            max-width: 100%;
+            padding: 0 30px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-wrap: normal;
+            overflow: hidden;
+        }
+
+        .share {
+            position: absolute;
+            margin-top: 10px;
+            right: 11px;
+            padding: 5px 5px 6px 10px;
+            color: #38ADFF;
+            font-weight: bold;
+        }
+
+        .page {}
+
+        /* .divBody {
+            overflow-y: scroll;
+            padding-top: 50px;
+        } */
+
+        .divBody div[id^='context'] {}
+
+        .divBody div[id^='context']>label {
+            float: left;
+            width: auto;
+            margin: 0.8rem 0;
+            margin-left: 1rem;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        hr {
+            background-color: #eee;
+            height: 1px;
+            width: 100%;
+            margin-bottom: 0px
+        }
+
+        hr.transparent {
+            background-color: #F8F8F8;
+        }
+
+        .divBody div[id^='context']>input,
+        textarea {
+            width: 67%;
+            height: 2.81rem;
+            float: right;
+        }
+
+        .divBody div[id^='context']>textarea {
+            height: 6rem;
+            padding: 0.85rem 0;
+            font-family: sans-serif;
+        }
+
+        .switch {
+            /* text-align: right; */
+            padding-right: 1rem;
+            width: auto;
+            /* height: 22px; */
+            display: flex;
+            /* float: right; */
+        }
+
+        .switch-active {
+            background-color: #38ADFF;
+        }
+
+        .switch span {
+            padding: 0.35rem 0.45rem;
+            font-size: 14px;
+            border: 1px solid #666666;
+            border-left: 0;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .switch span:first-child {
+            border-left: 1px solid #666666;
+            border-radius: 8px 0px 0px 8px;
+        }
+
+        .switch span:last-of-type {
+            border-radius: 0px 8px 8px 0px;
+        }
+
+        .select {
+            float: right;
+            width: 67%;
+            padding: 0.8rem 0;
+            padding-right: 1rem;
+            box-sizing: border-box;
+        }
+
+        .select *:first-child {
+            float: left;
+        }
+
+        .select img {
+            float: right;
+            width: 1rem;
+        }
+
+        .contextHead {
+            width: 100%;
+            padding: 0.8rem 0;
+            background: #38ADFF;
+            color: #fff;
+            position: relative;
+        }
+
+        .contextHead .left {
+            margin-left: 1rem;
+            font-size: 14px;
+        }
+
+        .contextHead .right {
+            position: absolute;
+            right: 0.89rem;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            font-size: 1rem;
+            padding: 0.1rem;
+        }
+
+        #addChildBtn {
+            background: #4DC060;
+            /* margin: 0.5rem auto; */
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            height: 40px;
+            line-height: 40px;
+            width: 49%;
+            float: left;
+        }
+
+        #addFamilyMemberBtn {
+            background: #4DC060;
+            margin-left: 0.5rem;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            height: 40px;
+            line-height: 40px;
+            width: 49%;
+            float: left;
+        }
+
+        #submit {
+            background: #38ADFF;
+            margin-left: 0.5rem;
+            /* margin: 0.5rem auto; */
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            height: 40px;
+            line-height: 40px;
+            width: 49%;
+            float: right;
+        }
+
+        .know {
+            background: #38ADFF;
+            /* margin: 0.5rem; */
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            height: 40px;
+            line-height: 40px;
+            /* width: 100%;
+            float: right; */
+        }
+
+        #pay {
+            background: #38ADFF;
+            /* margin: 0.5rem; */
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            height: 40px;
+            line-height: 40px;
+            /* width: 100%;
+            float: right; */
+        }
+
+        .photo {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .photo li {
+            padding-left: 1rem;
+            padding-bottom: 15px;
+            display: inline-block;
+            width: 33%;
+        }
+
+        .photo li img {
+            width: 98%;
+        }
+
+        .photo span {
+            color: #CCC;
+            font-size: 1rem;
+            line-height: 40px;
+            margin-left: 1rem;
+        }
+
+        span.head {
+            color: #CCC;
+            font-size: 16px;
+            line-height: 40px;
+            margin-left: 10px;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        input:focus {
+            outline-width: 0;
+        }
+
+        /*图标*/
+        @font-face {
+            font-family: "auiicon";
+            src: url('CSS/aui/aui_iconfont.ttf') format('truetype');
+        }
+
+        .aui-iconfont {
+            position: relative;
+            font-family: "auiicon" !important;
+            font-size: 1.06rem;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .aui-icon-close:before {
+            content: "\e646";
+        }
+
+        .markedWords {
+            margin-left: 0px;
+            margin-top: 0;
+            padding: 0;
+            background-color: #7f7f7f;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+        }
+
+        .markedWordsspan {
+            /*margin: 0.4rem 0;*/
+            /* margin-left: 0.4rem; */
+            /* margin-top: 0.6rem; */
+            margin-bottom: 0.4rem;
+        }
+
+        .markedWordsspan-600 {
+            font-weight: bold !important;
+        }
+
+        .markedWordsspan-content {
+            padding-top: 8px;
+            padding-bottom: 2px;
+        }
+
+        .markedWordsspan-item {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin: 0;
+        }
+
+        .aui-checkbox-left {
+            width: 22px !important;
+            min-height: 22px !important;
+            height: 22px !important;
+            border-radius: 4px !important;
+            border: 1px solid #ddd !important;
+            -webkit-appearance: none;
+            transition: background-color ease 0.1s;
+            position: relative;
+            outline: none !important;
+        }
+
+        .aui-checkbox-left:checked {
+            background-color: #38ADFF;
+            /*border: solid 1px #38ADFF;*/
+            border: 0px !important;
+            text-align: center;
+        }
+
+        .aui-checkbox-left:checked:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 16px;
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            color: #ffffff;
+        }
+
+        .aui-checkbox-left:checked:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 16px;
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            color: #ffffff;
+        }
+
+        .aui-checkbox-left:disabled {
+            border: solid 1px #d9d9d9;
+            background-color: #FFFFFF;
+        }
+
+        .aui-checkbox-left:disabled:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "";
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .aui-checkbox-left:disabled:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "";
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .aui-checkbox-left:checked:disabled {
+            background-color: #d9d9d9;
+            border: 0px;
+            /*border: solid 1px #d9d9d9;*/
+        }
+
+        .aui-checkbox-left:checked:disabled:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .aui-checkbox-left:checked:disabled:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        /* lixiaowei */
+        .flexContent {
+            display: flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .flexContent>label {
+            /* margin-right:0.4rem; */
+            display: inline;
+        }
+
+        .flexContent>.title-label {
+            /* margin-right:0.4rem; */
+            display: inline;
+            position: absolute;
+        }
+
+        .flexContent>.labelNext {
+            margin-left: 18px;
+        }
+
+        .firstTitle {
+            display: flex;
+            padding: 10px 20px;
+            color: #0066FF;
+            font-weight: bold;
+        }
+
+        .flexChild {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .flexChild>.childInfo {
+            width: auto;
+            margin: 1rem 0;
+            margin-left: 1rem;
+            word-wrap: break-word;
+            word-break: break-all;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .flexChild>.childInput {
+            width: 66.7%;
+            /* line-height: 46px; */
+            font-size: 16px;
+            height: 36px;
+            padding: 10px 0;
+        }
+
+        .flexLast {
+            display: flex;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flexLast>.childName {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .flexLast>.payment {
+            display: inline-block;
+            padding: 2px 4px;
+            background: #38adff;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .paymentName {
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+            padding: 10px 0;
+        }
+
+        .paymentMoney {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .paymentMoney>.paymentIcon {
+            font-size: 22px;
+            position: absolute;
+            left: 50%;
+            margin-left: -80px;
+        }
+
+        .paymentMoney>input {
+            width: 100px;
+            border: 1px solid #999;
+            /* border-top: 1px solid #999;
+            border-bottom: 1px solid #999; */
+            padding: 5px 10px;
+            border-radius: 5px;
+            /* margin-left:5px; */
+            outline: none;
+        }
+
+        .flexPayment {
+            display: flex;
+            flex-direction: row;
+            padding: 5px 20px;
+        }
+
+        .flexPayment>.itemName {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flexPayment>.itemContent {
+            flex: 1;
+            text-align: center;
+            display: flex;
+        }
+
+        .flexPayment>.itemContent>textarea {
+            width: 100%;
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 8px;
+            height: 80px;
+            outline: none;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .thridHeader {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9;
+        }
+
+        .selectInput {
+            position: fixed;
+            bottom: 52px;
+            background: #fff;
+            width: 100%;
+        }
+
+        .bottomSubmit {
+            padding: 0.5rem;
+            display: flex;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background: #ffffff;
+            height: 52px;
+        }
+
+        .bottomSubmit>div {
+            flex: 1;
+        }
+
+        /*单选框复选框*/
+        .aui-checkbox {
+            width: 22px !important;
+            min-height: 22px !important;
+            height: 22px !important;
+            margin: 0px;
+            /* border-radius: 4px !important; */
+            border-radius: 50% !important;
+            border: 1px solid #ddd !important;
+            -webkit-appearance: none;
+            transition: background-color ease 0.1s;
+            position: relative;
+            outline: none !important;
+            margin-right: 20px !important;
+        }
+
+        .aui-checkbox:checked {
+            background-color: #38ADFF;
+            /*border: solid 1px #38ADFF;*/
+            border: 0px !important;
+            text-align: center;
+        }
+
+        .aui-checkbox:checked:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 16px;
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            color: #ffffff;
+        }
+
+        .aui-checkbox:checked:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 16px;
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            color: #ffffff;
+        }
+
+        .aui-checkbox:disabled {
+            border: solid 1px #d9d9d9;
+            background-color: #FFFFFF;
+        }
+
+        .aui-checkbox:disabled:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "";
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .aui-checkbox:disabled:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "";
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .aui-checkbox:checked:disabled {
+            background-color: #d9d9d9;
+            border: 0px;
+            /*border: solid 1px #d9d9d9;*/
+        }
+
+        .aui-checkbox:checked:disabled:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .aui-checkbox:checked:disabled:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            font-family: "auiicon";
+            content: "\e645";
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .wordSpanLeft {
+            margin-left: 33px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page" class="page">
+        <!-- <div class="thridHeader">
+            <div class="topbar whitebar">
+                <div class="back" tapmode="" onclick="closeCurrWin()">
+                    <img src="../../image/ic_back_u.png" alt="" class="secClasslistarrow">
+                </div>
+                <div class="title"></div>
+            </div>
+        </div> -->
+        <div class="divBody">
+            <div style="height:50px">
+                <div class="title"
+                    style="line-height: 50px; position: absolute;font-size: 17px;left: 50%;-webkit-transform: translateX(-50%); transform: translateX(-50%)">
+                    蜂堡服务协议
+                </div>
+            </div>
+            <div id="context1">
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <p>欢迎您使用蜂堡服务！</p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为使用蜂堡服务，请您认真阅读并遵守本协议，本协议是由您（乙方）与天津市川迪科技有限公司（甲方）就您使用本服务相关事项所订立的有效合约。您通过网络页面点击确认或以我们认可的其他方式选择接受本协议的，即表示您与我们已达成本协议并同意接受本协议的约定内容。<br>
+                    </span>
+                </div>
+                <div style="height:50px">
+                    <div class="title"
+                        style="line-height: 50px; position: absolute;font-size: 15px;left: 50%;-webkit-transform: translateX(-50%); transform: translateX(-50%)">
+                        正文
+                    </div>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本协议由缔约双方在自愿、平等、公平及诚实信用原则的基础上，根据《中华人民共和国合同法》、《消费者权益保护法》等相关法律、法规的规定，经友好协商缔结。<br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本协议由协议正文、附件及依据本协议公示于甲方平台的各项规则所组成，协议附件及规则与本协议具有同等法律效力，如规则与本协议约定不一致的，以公布生效日期或签署日期在后的文件为准执行。<br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本协议各条的标题仅为方便阅读而设，无意成为本协议的一部分，也不影响本协议的含义或解释。<br>
+                    </span>
+                </div>
+                <div class="firstTitle">第一条 名词定义</div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">1.1</label>
+                        <span class="markedWordsspan-content">产品服务平台：指甲方所有产品和服务的统称。</span>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">1.2</label>
+                        <span class="markedWordsspan-content">机构端：指使用产品服务平台的机构端功能的自然人、法人或其他组织。</span>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">1.3</label>
+                        <span class="markedWordsspan-content">个人用户：指机构端的员工、家长、会员等用户。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">1.4</label>
+                        <span class="markedWordsspan-content">供应商：指为产品和服务平台提供第三方服务的企业。</span>
+                    </span>
+                </div>
+                <div class="firstTitle">第二条 机构资格要求以及证明文件</div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">2.1</label>
+                        <span class="markedWordsspan-content">乙方可以以“团队”名义开通蜂堡办公系统，开通之后即可开始使用一些基础的功能。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">2.2</label>
+                        <span
+                            class="markedWordsspan-content">乙方通过提交甲方所要求的证明文件，可从“团队”升级为“认证企业”，升级之后可以获得更多的功能和使用权限。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">2.3</label>
+                        <span class="markedWordsspan-content">开通“认证企业”时的管理规定如下：</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <div class="markedWordsspan-item">
+                            &nbsp;&nbsp;&nbsp;&nbsp;（1）乙方已依照中华人民共和国法律注册并领取合法有效的营业执照及取得其他经营许可，身份信息应为乙方自身情况的客观表现；<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（2）乙方提交的证明文件及信息均真实、合法、有效，所使用的图片、文字等不侵犯任何第三方权益；<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（3）乙方保证上述证明文件发生任何变更或更新时立即通知甲方，并于变更或更新之日起十五个工作日内，提交更新后的文件并依据甲方平台实时公布的流程进行相应认证。<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（4）乙方提交虚假、过期文件、或未如期通知并提交更新文件等情形的，由乙方独立承担全部法律责任。若由此导致乙方的店铺信息不符合甲方平台所公示的店铺认证条件的，甲方有权要求乙方补充提供相关资料，或者拒绝乙方申请、调整卖家权限、直至终止本协议。如乙方造成甲方及其他任何第三方损失的，乙方还应承担全部责任并足额赔偿。<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（5）乙方签署本协议并同意甲方平台规则内容；<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（6）甲方依据国家法律法规、政策或其他规范性文件规定及经营需要可能设定的其他条件。<br>
+                        </div>
+                    </span>
+                </div>
+                <div class="firstTitle">第三条 甲方产品和服务内容</div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">3.1</label>
+                        <span class="markedWordsspan-content">&nbsp;甲方拥有自主知识产权的“蜂堡”产品线，主要产品和服务包括但不限于：</span><br>
+                    </span>                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <div class="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;（1）蜂堡办公系统网页版（www.beehome.vip）<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（2）蜂堡办公系统APP版（APP名称：蜂堡办公）<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（3）蜂堡家长端（蜂堡APP、校园号、支付宝生活号）<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（4）蜂堡记账本<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（5）蜂堡校园商城<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（6）蜜小蜂讲堂<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（7）蜂堡智能硬件<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;（8）蜂堡校园一卡通<br>
+                        </div>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">3.2</label>
+                        <span class="markedWordsspan-content">&nbsp;产品订购单</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">甲方为乙方提供产品和服务的最终内容，以《订购单》为准。《订购单》由乙方填写，然后签字盖章之后交给甲方。每次订货均需提交单独的《订购单》，另外，当乙方为集团连锁、拥有多家实体机构时，需要为每家实体机构分别提交《订购单》。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">《订购单》中某些产品或服务，可能约定了有效期间，这种情况下，产品和服务到期之后会自动停止。如果乙方需要继续使用产品和服务，需要提交新的《订购单》。</span><br> <span
+                            class="markedWordsspan-content wordSpanLeft">《订购单》中的“押金”，适用于收取押金的情况。押金收取以及押金退还时分别提交《订购单》，后者金额为负。另外，押金退还条件以《订购单》中手写的内容为准。</span><br>
+                    </span>
+                </div>
+                <div class="firstTitle">第四条 价格及付款</div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">4.1</label>
+                        <span class="markedWordsspan-content">&nbsp;价格</span><br>
+                        <span class="markedWordsspan-content wordSpanLeft">价格以《订购单》上的实际价格为准。</span>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">4.2</label>
+                        <span class="markedWordsspan-content">&nbsp;付款</span><br>
+                        <span class="markedWordsspan-content wordSpanLeft">乙方付款时，需要付款至甲方指定账户，不得付款至其他账户。</span><br>
+                        <span class="markedWordsspan-content wordSpanLeft">先付款的情况，乙方付款之后，甲方开通产品和服务。后付款的情况，在甲方开通产品和服务之后，乙方需在约定期限内完成付款。</span><br>
+                    </span>
+                </div>
+                <div class="firstTitle">第五条 双方权利和义务</div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">5.1</label>
+                        <span class="markedWordsspan-content">甲方负责产品的安装调试及培训，并为乙方初期数据导入提供技术支持。</span>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">5.2</label>
+                        <span class="markedWordsspan-content">乙方负责提供系统运营所必需的网络环境和设备。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">5.3</label>
+                        <span class="markedWordsspan-content">乙方承诺，其在甲方提供平台上发布的任何信息、图片、资料、试听资料等，不会违反现行法律法规的规定，不会涉及任何虚假、不实内容，不会侵犯任何第三人的肖像权、著作权或其它权利，否则应当自行承担全部法律责任，如因此给甲方造成损失的，乙方应承担赔偿责任。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">5.4</label>
+                        <span class="markedWordsspan-content">对于出现第三方投诉乙方发布信息侵犯第三方知识产权的，经甲方初步核实，甲方有权采取删除、屏蔽、断开链接、终止交易和服务等必要措施，并将通知乙方。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">5.5</label>
+                        <span class="markedWordsspan-content">乙方特此授权甲方，在甲方（包含甲方关联公司，下同）以及甲方认可的合作伙伴的商业宣传中无偿使用乙方的公司名称、品牌、LOGO以及其它乙方在平台上发布的图片、资料等信息的权利。甲方及其合作伙伴无需向乙方支付任何费用，也无需为此签署附加的协议。但是，根据具体情况，如果乙方认为某些宣传不妥并指出后，甲方必须（或督促其合作伙伴）执行下架操作，乙方不对下架前的“不妥”追究甲方及其合作伙伴的责任。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">5.6</label>
+                        <span class="markedWordsspan-content">乙方同意并且承诺获得乙方学员及其监护人的同意，在乙方学员参与的课程中，或乙方及学员参与甲方组织、举办的其他活动中，甲方可以进行拍照、摄像、录音、录像等记录活动。甲方对上述记录活动过程中所产生的作品、录音录像制品等单独地享有全部、完整的知识产权。但是，甲方同意依法为乙方及学员的个人信息采取严格的保密措施，未经乙方、乙方学员及其监护人的同意，甲方不得将上述包含乙方及学员肖像或者显示个人身份的其他个人信息进行公开地商业使用。</span><br>
+                    </span>
+                </div>
+                <div class="firstTitle">第六条 保密条款</div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">6.1</label>
+                        <span class="markedWordsspan-content">一方对于本协议的签订、内容及在履行本协议期间所获知的其他方的商业秘密负有保密义务。非经相对方书面同意，不得向相对方以外的任何第三方(关联公司除外)泄露、给予或转让该等保密信息。根据法律法规、证券交易所规则向政府、证券交易所和/或其他监管机构提供、协议方的法律、会计、商业及其他顾问、雇员除外)。</span>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">6.2</label>
+                        <span class="markedWordsspan-content">一方提出要求时，另外一方应将载有对方单独所有的保密信息的任何文件、资料或软件等，在本协议终止后按对方要求进行归还或予以销毁，或进行其他处置，不得继续使用这些保密信息。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">6.3</label>
+                        <span class="markedWordsspan-content">在双方合作终止之后，各方在本条款项下的义务并不随之终止，各方仍需遵守本协议之保密条款，履行其所承诺的保密义务，直到其他方同意其解除此项义务，或事实上不会因违反本协议的保密条款而给其他方造成任何形式的损害时为止。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <label class="title-label">6.4</label>
+                        <span class="markedWordsspan-content">任何一方均应告知并督促其因履行本协议之目的而必须获知本协议内容及因合作而获知对方商业秘密的雇员、代理人、顾问等遵守保密条款，并对其雇员、代理人、顾问等的行为承担责任。</span><br>
+                    </span>
+                </div>
+                <div class="firstTitle">第七条 服务约定（如不使用相关服务则跳过）</div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">7.1</label>
+                        <span class="markedWordsspan-content">&nbsp;关于金融服务的约定</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">使用银行或者第三方支付机构的支付或者贷款等金融服务时，如有必要，乙方与提供服务的银行或者第三方支付机构单独签署协议，协议内容与甲方无关。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">甲方不对银行或者第三方支付系统的服务内容、服务内容的变更以及系统故障等给用户造成的不便或者损失承担责任。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">7.2</label>
+                        <span class="markedWordsspan-content">&nbsp;关于教师端系统以及家长端系统的约定</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">教师端系统是指包括但不限于蜂堡办公系统、蜜小蜂教育平台管理后台等机构人员所使用的系统，家长端系统是指包括但不限于蜂堡APP、校园号、支付宝生活号、蜂堡公众号、蜂堡未来课堂公众号、蜜小蜂讲堂等家长所使用的系统。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">乙方在系统发布消息或者公告时，不得发布违反国家法律的任何信息。另外，乙方需监督自己的老师和家长，不得在系统中发表不当言论。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">乙方以及乙方相关人员在甲方平台上的视频、音频、图像、头像等各种资料，甲方无须再单独取得乙方同意，也无须向乙方支付任何费用。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">7.3</label>
+                        <span class="markedWordsspan-content">&nbsp;关于硬件的约定</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">甲方为乙方提供硬件的具体型号及价格以订单为准。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">硬件的所有权在《订购单》中进行约定。如果硬件所有权归属甲方，那么除特殊情况之外，甲方在合同期内提供免费保修或者更换服务，合作终止后硬件由甲方收回。如果硬件所有权归属乙方，那么质保期均为自交货之日起1年，除特殊情况之外，质保期内甲方负责免费保修，保修方式为硬件返厂维修，免费更换零件，质保期结束后，甲方提供维修服务，更换零件按成本收费。这里所说的特殊情况，主要包括：使用不当、自行拆卸、改造、人为破坏、自然耗损、消耗品以及公害、电压异常、地震、雷电、风害或其它自然灾害等不可抗力的情况。无论哪种情况，邮寄费、维修人员差旅费等相关费用需由乙方负担。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">关于门禁卡等系统周边附件，甲方须确保其在交付时可以正常使用，但是乙方验收之后，甲方不再提供免费更换服务。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">如果约定由甲方协助安装，那么乙方需事先将电力和网络接到打卡机的预定位置，并保证即插即用，设备安装之前的工程费由乙方自行负担。与此同时，乙方需保证设备正常运行所需要的不间断的电力和网络，电力不稳或者网络不通造成设备无法正常使用的情况，不在甲方的责任范围内。</span><br>
+                    </span>
+                </div>
+ 
+                <div class="firstTitle">第八条 免责条款及违约责任</div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">8.1</label>
+                        <span
+                            class="markedWordsspan-content">因下列原因导致平台无法正常提供服务，甲方免于承担责任：（1）系统停机维护或升级；（2）因台风、地震、洪水、雷电或恐怖袭击等不可抗力原因；（3）乙方的电脑软硬件和通信线路、供电线路出现故障的；（4）因乙方操作不当或通过非经甲方授权或认可的方式使用平台服务的；（5）因病毒、木马、恶意程序攻击、网络拥堵、系统不稳定、系统或设备故障、通讯故障、电力故障、银行原因、第三方服务瑕疵或政府行为等原因；（6）甲方产品服务平台嵌入在第三方平台内时，由于第三方平台的故障或者相关规定的变更而导致产品服务平台不能正常运行的情况。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">8.2</label>
+                        <span
+                            class="markedWordsspan-content">甲方将尽力保护乙方使用本服务产生的数据，并为此采取合理的数据传输、存储、转换等预防保护措施。但是，互联网数据传输、存储、转换均可能存在一定未知且不确定的数据安全风险，该等风险将导致包括但不限于数据丢失、泄露、损坏、无法读取或提取等后果。乙方明确知晓并同意接受该等因互联网引发的风险和后果，并已采取恰当的措施，以便在该等风险发生时将损失降至最低。</span><br> 
+                    </span>
+                </div>
+                <div class="firstTitle">第九条 其他条款</div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">9.1</label>
+                        <span class="markedWordsspan-content">&nbsp;争议管辖</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">如果任何在本协议有效期内或之后双方发生的与本协议条款的有效性、解释、履行或违约相关的争议，该争议必须由甲方所在地人民法院进行诉讼。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">9.2</label>
+                        <span class="markedWordsspan-content">&nbsp;变更和补充</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">任何对于本协议的变更，甲方须以界面提示或书面形式提示乙方，乙方需重新确认或签署。本协议的未尽事宜，甲乙双方可达成书面补充协议，补充协议与本协议具有同等法律效力。补充协议的内容与本协议有冲突时以补充协议为准。</span><br>                        
+                    </span></div>
+                <div class="flexContent">
+                    <span class="markedWordsspan">
+                        <label class="title-label">9.3</label>
+                        <span class="markedWordsspan-content">&nbsp;通知</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">依据本协议所发出的任何通知或其它沟通均应当以书面形式做出，并且应当以传真、电子邮件或特快专递的方式做出。如果以快递方式递送，则所有通知和沟通均将在通知寄出后第五日视为已有效地送达。如果以电子邮件方式，则在邮件送达收件人邮箱服务器时视为有效地送达。</span><br>
+                        <span
+                            class="markedWordsspan-content wordSpanLeft">任何一方均可以变更其接收通知或其它依据本协议所提供的沟通地址或收件人，但必须提前不少于10天以书面形式通知对方。</span><br>
+                    </span>
+                </div>
+                <div class="flexContent" style="float: right;">
+                    <!-- <label>1.</label> -->
+                    <span class="markedWordsspan">
+                        <span class="markedWordsspan-600">最近更新日期：2019/11/07</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
